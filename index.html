@@ -12,8 +12,8 @@
 <main>
 <article aria-label="All-time XI Privacy Policy">
 <h1>All-time XI Privacy Policy</h1>
-<p><strong>Effective date: 10 September 2026</strong></p>
-<p>All-time XI (&quot;All-time XI&quot;, &quot;we&quot;, &quot;us&quot; or &quot;the app&quot;) is a mobile cricket game. This Privacy Policy explains what information is collected or processed when you use All-time XI, why it is used, and the choices available to you.</p>
+<p><strong>Effective date: 16 September 2026</strong></p>
+<p>All-time XI (&quot;All-time XI&quot;, &quot;we&quot;, &quot;us&quot; or &quot;the app&quot;) is a mobile cricket game for Android and iOS. This Privacy Policy explains what information is collected or processed when you use All-time XI, why it is used, and the choices available to you.</p>
 <p>For privacy questions or requests, contact:</p>
 <p><strong>alltimexi.game@gmail.com</strong></p>
 <h2>1. Information stored on your device</h2>
@@ -29,7 +29,8 @@
 <li>a cached result image when you use the sharing feature.</li>
 </ul>
 <p>Your local completed-run database is not uploaded or synchronised to a cloud account. Some gameplay and result information may separately be sent through product analytics when Analytics is enabled, as described below.</p>
-<p>Clearing the app's data or uninstalling the app generally removes locally stored information, subject to normal Android behaviour. Copies of result images or messages that you have shared with other apps or people are not deleted when All-time XI is uninstalled.</p>
+<p>Unfinished runs are held in memory: backgrounding the app alone does not discard them, but ending the app's process loses an unfinished run. Completed-run records and preferences are stored separately. The analytics and advertising SDKs also maintain local information such as analytics identity/queued events and advertising privacy choices.</p>
+<p>Clearing the app's data on Android or deleting the app on Android or iOS generally removes app-local information, subject to normal operating-system behaviour. Copies of result images or messages that you have shared with other apps or people are not deleted when All-time XI is uninstalled.</p>
 <h2>2. Product analytics</h2>
 <p>All-time XI uses PostHog to help us understand how the game is used and improve the experience.</p>
 <p>When Analytics is enabled, we may collect pseudonymous information about events such as:</p>
@@ -43,9 +44,9 @@
 <li>Play Again usage; and</li>
 <li>game results such as wins, losses, grade, World Cups won, Leaderboard Points and average scores.</li>
 </ul>
-<p>Analytics may also include technical information such as app and SDK versions, Android as the operating system, session identifiers, timestamps, and pseudonymous installation, run and event identifiers.</p>
+<p>Analytics may also include technical information such as app and SDK versions, Android or iOS as the operating system, session identifiers, timestamps, and pseudonymous installation, run, ad-attempt and event identifiers.</p>
 <p>All-time XI does not use PostHog session replay, screen recording, screenshot capture, autocapture or PostHog crash recording.</p>
-<p>We do not send PostHog your name, email address, phone number, contacts, advertising ID, precise location or other information intended to identify you directly.</p>
+<p>We do not send PostHog your name, email address, phone number, contacts, advertising or hardware identifiers, device model, precise location or other information intended to identify you directly. The pseudonymous analytics identifiers described above are separate from advertising or hardware identifiers.</p>
 <p>PostHog's infrastructure necessarily processes your network connection, including your IP address, when analytics events are transmitted. All-time XI disables PostHog GeoIP enrichment for its analytics events and does not request access to your device's precise location.</p>
 <p>Analytics data is sent to PostHog's EU Cloud infrastructure.</p>
 <h2>3. Your Analytics choice</h2>
@@ -54,8 +55,9 @@
 <p><strong>Menu → Analytics</strong></p>
 <p>When Analytics is disabled, All-time XI stops capturing and uploading new PostHog analytics events and resets applicable local analytics identity and queued analytics state.</p>
 <p>If you later enable Analytics again, future analytics activity may be collected under a reset pseudonymous identity. Activity suppressed while Analytics was disabled is not retrospectively uploaded as individual analytics events.</p>
+<p>Local run totals and completed-run counts continue while Analytics is disabled. If you enable Analytics again before completing a run, a later completion event can include totals covering the whole run, including that interval.</p>
 <p>Disabling Analytics does not disable rewarded advertising or change your Google advertising privacy choices.</p>
-<p>Information already transmitted to PostHog before you disabled Analytics is not automatically deleted by switching the setting off.</p>
+<p>Information already transmitted to PostHog before you disabled Analytics is not automatically deleted by switching the setting off. A request already received by the service cannot be recalled.</p>
 <h2>4. Rewarded advertising</h2>
 <p>All-time XI uses Google AdMob to provide optional rewarded advertisements.</p>
 <p>You may choose to watch a rewarded advertisement to receive an additional Country or Year reroll. Watching rewarded advertisements is optional and is not required to play the normal game.</p>
@@ -69,6 +71,7 @@
 <li>diagnostic and fraud-prevention information.</li>
 </ul>
 <p>Google may use this information for advertising, measurement, security, fraud prevention and related purposes in accordance with Google's policies and your applicable privacy/consent choices.</p>
+<p>The current iOS app does not request App Tracking Transparency permission or obtain Apple's advertising identifier (IDFA). Other Google SDK processing described above can still occur.</p>
 <p>All-time XI does not provide Google with your name, email address, XI/player-selection analytics or a custom advertising user ID.</p>
 <p>Advertisements may be loaded in advance so that they are available if you choose to request a rewarded reroll. This means some Google advertising processing may occur before you actively choose to watch a particular ad.</p>
 <h2>5. Advertising privacy choices</h2>
@@ -106,7 +109,7 @@
 <li>World Cups won; and</li>
 <li>other game-result information.</li>
 </ul>
-<p>Sharing is initiated by you.</p>
+<p>Sharing is initiated by you through Android's native sharing chooser or the iOS share sheet.</p>
 <p>When you choose to share a result, the destination app or recipient is selected by you and their own privacy practices apply.</p>
 <p>All-time XI does not access your personal photo library to create the result image.</p>
 <h2>8. Third-party services</h2>
@@ -117,14 +120,16 @@
 <h3>PostHog</h3>
 <p>Used for pseudonymous product analytics when Analytics is enabled.</p>
 <p>All-time XI uses PostHog's EU Cloud infrastructure and has disabled GeoIP enrichment, session replay, autocapture and PostHog crash recording in the app.</p>
+<h3>Connectivity checks</h3>
+<p>The iOS app makes HTTPS connectivity checks to Apple's captive.apple.com service. Apple receives ordinary connection information, such as your IP address and standard request metadata. The check does not include your XI, game results or app analytics identifiers. Android uses the operating system's validated-network status. Game-result calculations take place on your device; a connectivity check does not upload your team for simulation.</p>
 <p>Third-party providers may process information in accordance with their own terms, privacy policies and legal obligations.</p>
 <h2>9. Data retention</h2>
-<p>Information stored locally by All-time XI is generally retained until you clear the app's data or uninstall the app, unless Android removes temporary cached information sooner.</p>
+<p>Completed-run records and preferences stored locally by All-time XI are generally retained until you clear the app's data on Android or delete the app. Temporary files and bounded analytics queues may be removed sooner by the app, its SDKs or the operating system. Unfinished runs last only for the current app process.</p>
 <p>Analytics information already transmitted to PostHog may be retained according to the PostHog service configuration and applicable PostHog policies. Turning Analytics off prevents future analytics capture as described above but does not automatically erase information previously received by PostHog.</p>
 <p>Advertising and consent-related information processed by Google is retained according to Google's applicable policies and controls.</p>
 <p>Copies of game results that you voluntarily share with another app or person are controlled by that recipient after sharing.</p>
 <h2>10. Data deletion and choices</h2>
-<p>You can remove locally stored All-time XI information by clearing the app's data through Android settings or uninstalling the app.</p>
+<p>You can remove app-local All-time XI information by clearing the app's data through Android settings or deleting the app on Android or iOS. On iOS, Offload App retains documents and data; it is different from Delete App. Local deletion does not automatically delete information already received by PostHog, Google or a sharing recipient.</p>
 <p>You can stop future PostHog product analytics from:</p>
 <p><strong>Menu → Analytics</strong></p>
 <p>Where Google's advertising privacy options are required and available, you can revisit those choices through the app's Privacy options control.</p>
@@ -132,13 +137,13 @@
 <p><strong>alltimexi.game@gmail.com</strong></p>
 <p>Because All-time XI does not currently require an account and analytics identifiers are pseudonymous, we may need information sufficient to determine whether a particular request can technically be associated with data held by a service provider. We will not ask for unnecessary personal information merely to process a request.</p>
 <h2>11. Security</h2>
-<p>All-time XI uses app-private Android storage for its local game records and settings.</p>
+<p>All-time XI uses app-private operating-system storage on Android and iOS for its local game records and settings.</p>
 <p>Information transmitted to PostHog and Google through their integrated SDKs is sent using their network and security mechanisms, including encrypted network transport where provided by those services.</p>
 <p>No method of electronic storage or transmission can be guaranteed to be completely secure.</p>
 <h2>12. Children's privacy</h2>
 <p>All-time XI is intended for a general audience and is not specifically directed at children.</p>
 <p>The app does not ask users to provide their age or date of birth and does not knowingly operate a child-profile or children's account system.</p>
-<p>Advertising and privacy treatment may also depend on Google Play, Google AdMob and applicable regional requirements.</p>
+<p>Advertising and privacy treatment may also depend on Google Play, Apple's App Store, Google AdMob and applicable regional requirements.</p>
 <p>If we learn that information has been collected in a way that requires action under applicable children's privacy law, we will take appropriate steps.</p>
 <h2>13. International processing</h2>
 <p>Some third-party services used by All-time XI may process information in countries other than the country where you live.</p>
